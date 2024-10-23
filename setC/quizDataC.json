@@ -4,7 +4,7 @@
   { "question": "3. Those who have a license for a regular automobile may not drive a truck with maximum loading capacity of 3000kg.", "answer":true },
   { "question": "4. If you drive while your license is suspended, it is considered as driving without a valid license.", "answer":true },
   { "question": "5. A holder of a regular vehicle license is not allowed to drive a light-duty special vehicle but is allowed to drive a moped.", "answer": false},
-  { "question": "6. When you drive a large vehicle or a specified medium truck, you should check the disc wheel to see if there is any notable wear or damage, loose wheel nuts, etc. before driving.", "answer":false },
+  { "question": "6. When you drive a large vehicle or a specified medium truck, you should check the disc wheel to see if there is any notable wear or damage, loose wheel nuts, etc. before driving.", "answer":true },
   { "question": "7. Four adults and three children (under the age of 12) may get on a vehicle with passenger capacity of six.", "answer": true },
   { "question": "8. Since sudden changes in brightness can momentarily affect human vision dramatically, you should slow down before entering or leaving a tunnel.", "answer":true },
   { "question": "9. You can carry a child on the carrier of a moped, if the child is less than 6 years old.", "answer": false },
