@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving License Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="/honmentest/" class=>Home</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Driving License Quiz</h1>
+
+        <!-- Start Quiz Button -->
+        <button id="start-quiz-btn" onclick="startQuiz()">Start Quiz</button>
+
+        <!-- Display all questions here, initially hidden -->
+        <div id="quiz-container" style="display: none;"></div>
+
+        <!-- Submit button initially hidden, shown when all questions are answered -->
+        <button id="submit-btn" style="display: none;" onclick="checkAnswers()">Submit Answers</button>
+
+        <!-- Display the result -->
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
