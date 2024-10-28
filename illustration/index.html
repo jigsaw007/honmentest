@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Driving License Quiz</title>
+    <title>Illustration Driving License Quiz</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -24,8 +24,12 @@
         <!-- Display all questions here, initially hidden -->
         <div id="quiz-container" style="display: none;"></div>
 
-        <!-- Submit button initially hidden, shown when all questions are answered -->
-        <button id="submit-btn" style="display: none;" onclick="checkAnswers()">Submit Answers</button>
+<!-- Submit button initially hidden, shown when all questions are answered -->
+<button id="submit-btn" style="display: none;" onclick="checkAnswers()">Submit Answers</button>
+
+<!-- Retake button initially hidden, shown only if all answers are correct -->
+<button id="retake-btn" style="display: none;" onclick="retakeQuiz()">Retake Quiz</button>
+
 
         <!-- Display the result -->
         <div id="result" class="result"></div>
