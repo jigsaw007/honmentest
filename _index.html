@@ -2,238 +2,307 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-26H8XCSFD8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-26H8XCSFD8');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-26H8XCSFD8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-26H8XCSFD8');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saitama Honmen Questions</title>
+    <!-- English Meta Tags -->
+    <meta name="description" content="Saitama Driving Test preparation for both Honmen and Karimen. Practice driving license test questions for Sets A, B, C, and D, including essential Karimen questions.">
+    <meta name="keywords" content="Honmen, Karimen, Driving Test, Practice Questions, Saitama, License Exam, Driving License">
+    <!-- Japanese Meta Tags -->
+    <meta name="description" content="埼玉の本免試験と仮免試験のための運転免許問題集。セットA、セットB、セットC、セットD、および仮免試験の重要な50問を含む問題集を提供します。">
+    <meta name="keywords" content="本免試験, 仮免試験, 運転免許試験, 問題集, 埼玉, 運転テスト, 免許試験">
+    <title>Saitama Driving Test - Honmen and Karimen | 玉の本免試験と仮免試験</title>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Global Styles */
+        /* General styles */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
+            background-color: #f9f9f9;
             color: #333;
         }
 
-        /* Navbar Styles */
+        /* Navbar styles */
         nav {
-            background-color: #0078D7;
-            padding: 1rem 2rem;
-            display: flex;
-            align-items: center;
-        }
+    background-color: #333;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 20px; /* Add consistent spacing between items */
+}
 
-        nav ul li {
-            margin-right: 1.5rem;
-        }
+nav ul li {
+    margin: 0;
+}
 
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            transition: color 0.3s;
-        }
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 15px; /* Add padding for consistent click areas */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
 
-        nav ul li a i {
-            margin-right: 0.5rem;
-        }
+nav ul li a:hover {
+    background-color: #444;
+}
 
-        nav ul li a:hover {
-            color: #dbe9ff;
-        }
-
-        /* Header Styles */
+nav ul li a.active {
+    background-color: #007BFF;
+}
+        /* Header styles */
         header {
+            margin-top: 70px;
             text-align: center;
-            padding: 2rem 1rem;
-            background-color: #0078D7;
-            color: white;
+            padding: 20px;
+            position: relative;
         }
 
         header h1 {
-            margin: 0;
             font-size: 2.5rem;
+            color: #007bff;
         }
 
-        /* Button Container Styles */
+        /* Animated Road */
+        .road-container {
+            position: relative;
+            margin-top: 20px;
+            height: 100px;
+            overflow: hidden;
+        }
+
+        .road {
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            background-color: #333;
+            border: 2px solid #555;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .road-lines {
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background: repeating-linear-gradient(
+                to right,
+                #fff 0%,
+                #fff 10%,
+                transparent 10%,
+                transparent 30%
+            );
+            top: 50%;
+            transform: translateY(-50%);
+            animation: move-lines 2s linear infinite;
+        }
+
+        @keyframes move-lines {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .road-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100px;
+            top: 0;
+            background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
+        }
+
+        /* Button Section */
         .button-container {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 1rem;
-            padding: 2rem;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 50px auto;
         }
 
         .set-button {
-            display: inline-block;
-            text-decoration: none;
-            background-color: #0078D7;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: 500;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: transform 0.2s, background-color 0.3s;
+            width: 200px;
+            height: 100px;
+            background-color: #007bff;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 15px;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, background-color 0.3s;
+            position: relative;
         }
 
         .set-button i {
-            margin-right: 0.5rem;
+            margin-right: 10px;
+            font-size: 2rem;
         }
 
         .set-button:hover {
-            background-color: #005BB5;
-            transform: translateY(-3px);
+            background-color: #0056b3;
+            transform: scale(1.1);
         }
 
-        /* Icon Section Styles */
+        .set-button:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            width: 100%;
+            position: relative; /* Change from fixed to relative */
+            bottom: 0;
+        }
+
+        body {
+            padding-bottom: 80px; /* Add padding to ensure content stays above the footer */
+        }
+
+        /* Icon Section */
         .icon-container {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 2rem;
-            padding: 2rem;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            margin: 2rem auto;
-            max-width: 1200px;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 50px auto;
         }
 
         .icon-box {
             text-align: center;
-            font-size: 2.5rem;
-            color: #0078D7;
+            font-size: 3rem;
+            color: #007bff;
         }
 
-        /* Score Box Styles */
-        .score-box-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 2rem auto;
-            padding: 1.5rem;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
+        .icon-box:hover {
+            color: #0056b3;
+            transform: scale(1.1);
+            transition: color 0.3s, transform 0.3s;
         }
+        /* Trust Signals Section */
+.trust-signals {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+}
 
-        .score-box p {
-            font-size: 1.2rem;
-            font-weight: 500;
-            color: #333;
-            margin: 0;
-            text-align: center;
-        }
+.trust-signals .badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #007bff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
 
-        .score-box .highlight {
-            color: #0078D7;
-            font-weight: 700;
-        }
+.trust-signals .badge i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #007bff;
+}
 
+.trust-signals .badge span {
+    font-size: 1rem;
+    color: #333;
+}
 
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-
-            .set-button {
-                font-size: 1rem;
-                padding: 0.8rem 1.5rem;
-            }
-
-            .icon-box {
-                font-size: 2rem;
-            }
-        }
     </style>
 </head>
 <body>
     <!-- Navbar -->
     <nav>
         <ul>
-            <li><a href="/honmentest/"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="/honmentest/"><i class="fas fa-road"></i> Honmen</a></li>
+            <li><a href="/karimentest/"><i class="fas fa-car"></i> Karimen</a></li>
         </ul>
     </nav>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6697752785156392"
-    crossorigin="anonymous"></script>
+
     <!-- Header -->
     <header>
-        <h1><i class="fas fa-question-circle"></i> Saitama Honmen Questions</h1>
+        <h1><i class="fas fa-traffic-light"></i> Saitama Driving Test <br> 普通車</h1>
+        <!-- Animated Road -->
+        <div class="road-container">
+            <div class="road">
+                <div class="road-lines"></div>
+            </div>
+        </div>
     </header>
 
-    <!-- Button Container -->
+    <!-- Button Section -->
     <div class="button-container">
-        <a href="/honmentest/setA/" class="set-button"><i class="fas fa-book"></i>SET A</a>
-        <a href="/honmentest/setB/" class="set-button"><i class="fas fa-book"></i>SET B</a>
-        <a href="/honmentest/setC/" class="set-button"><i class="fas fa-book"></i>SET C</a>
-        <a href="/honmentest/setD/" class="set-button"><i class="fas fa-book"></i>SET D</a>
-        <a href="/honmentest/illustration/" class="set-button"><i class="fas fa-image"></i>Illustration</a>
+        <a href="/honmentest/" class="set-button"><i class="fas fa-road"></i> HONMEN<br>本免許</a>
+        <a href="/karimentest/" class="set-button"><i class="fas fa-car"></i> KARIMEN<br>仮免許</a>
     </div>
 
     <!-- Icon Section -->
     <div class="icon-container">
-        <div class="icon-box">
-            <i class="fas fa-car"></i>
-        </div>
-        <div class="icon-box">
-            <i class="fas fa-motorcycle"></i>
-        </div>
-        <div class="icon-box">
-            <i class="fas fa-traffic-light"></i>
-        </div>
-        <div class="icon-box">
-            <i class="fas fa-road"></i>
-        </div>
-        <div class="icon-box">
-            <i class="fas fa-shield-alt"></i>
-        </div>
-        <div class="icon-box">
-            <i class="fas fa-gas-pump"></i>
-        </div>
-        <div class="icon-box">
-            <i class="fas fa-parking"></i>
-        </div>
-        <div class="icon-box">
-            <i class="fas fa-bus"></i>
-        </div>
-        <div class="icon-box">
-            <i class="fas fa-bicycle"></i>
-        </div>
-        <div class="icon-box">
-            <i class="fas fa-truck"></i>
-        </div>
+        <div class="icon-box"><i class="fas fa-car"></i></div>
+        <div class="icon-box"><i class="fas fa-motorcycle"></i></div>
+        <div class="icon-box"><i class="fas fa-traffic-light"></i></div>
+        <div class="icon-box"><i class="fas fa-road"></i></div>
+        <div class="icon-box"><i class="fas fa-parking"></i></div>
+        <div class="icon-box"><i class="fas fa-gas-pump"></i></div>
     </div>
-    <div class="score-box-container">
-        <div class="score-box">
-            <p>Score <span class="highlight">90 out of 100</span> to <span class="highlight">Pass</span>!</p>
-        </div>
+    <!-- Trust Signals Section -->
+<div class="trust-signals">
+    <div class="badge">
+        <i class="fas fa-shield-alt"></i>
+        <span>Secure Website</span>
     </div>
-    <script async="async" data-cfasync="false" src="//pl25415083.profitablecpmrate.com/74ffd25d02853ffefcab4a7fb5b1886d/invoke.js"></script>
+    <div class="badge">
+        <i class="fas fa-check-circle"></i>
+        <span>100% Accurate Questions</span>
+    </div>
+</div>
+<script async="async" data-cfasync="false" src="//pl25415083.profitablecpmrate.com/74ffd25d02853ffefcab4a7fb5b1886d/invoke.js"></script>
 <div id="container-74ffd25d02853ffefcab4a7fb5b1886d"></div>
-<!--Commit-->
+    <footer>
+        <p>© 2024 Saitama Driving Test Questions | Karimen | Honmen </p>
+    </footer>
+    
 </body>
 </html>
