@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Saitama Driving Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            gap: 20px;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #444;
+        }
+
+        nav ul li a.active {
+            background-color: #007BFF;
+        }
+
+        header {
+            margin-top: 70px;
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: #0078D7;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            margin-top: 5px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #007BFF;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="/honmentest/"><i class="fas fa-road"></i> Honmen</a></li>
+            <li><a href="/karimentest/" class="active"><i class="fas fa-car"></i> FAQ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1><i class="fas fa-question-circle"></i> Frequently Asked Questions</h1>
+    </header>
+
+    <!-- FAQ Section -->
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">What is Saitama Driving Test? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">Saitama Driving Test is a platform that provides practice quizzes and resources to help you prepare for the driving license tests in Japan.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How can I use the quizzes? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">Simply navigate to the "Quiz" section of our site, select the category you want to practice, and start answering questions!</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Are the quizzes free to use? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">Yes, all the quizzes and resources on our website are completely free to use.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Can I track my progress? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">Currently, progress tracking is not available, but we are working on adding this feature in the future.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Who should use this platform? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer">This platform is designed for anyone preparing for the Japanese driving license tests, including learners, foreign residents, and experienced drivers looking to refresh their knowledge.</div>
+        </div>
+    </div>
+
+    <script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                const icon = question.querySelector('i');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+    </script>
+</body>
+</html>
